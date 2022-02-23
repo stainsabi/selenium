@@ -6,11 +6,7 @@ pipeline{
 		maven 'M3'
 	}
 	stages{
-		stage('checkout'){
-			steps{
-				git 'https://github.com/stainsabi/selenium.git'
-			}
-		}
+		
 		stage('build'){
 			steps{
 				bat 'mvn clean compile'
