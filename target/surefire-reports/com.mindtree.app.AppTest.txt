@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mindtree.app.AppTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.701 s - in com.mindtree.app.AppTest
