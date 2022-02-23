@@ -1,0 +1,33 @@
+pipeline{
+	agent{
+		label 'win'
+	}
+	tools {
+		maven 'M3'
+	}
+	stages{
+		stage('checkout'){
+			steps{
+				git ''
+			}
+		}
+		stage('build'){
+			steps{
+				bat 'mvn clean compile'
+			}
+		}
+		
+		stage('Test'){
+			steps{
+				bat 'mvn test'
+				junit '**/target/surefire-reports/TEST-*.xml'
+			}
+		}
+		stage('package'){
+			steps{
+				bat 'mvn package'
+			}
+		}
+		
+	}
+}
