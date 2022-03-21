@@ -2,24 +2,19 @@ pipeline{
 	agent{
 		label 'win'
 	}
-	tools {
+	tools{
 		maven 'M3'
 	}
+	
 	stages{
 		
-		
-		
-		stage('Test'){
+		stage('build'){
 			steps{
-				bat 'mvn test'
-				junit '**/target/surefire-reports/TEST-*.xml'
+				bat 'mvn clean install'
 			}
 		}
-		stage('package'){
-			steps{
-				bat 'mvn package'
-			}
-		}
+		
+		
 		
 	}
 }
