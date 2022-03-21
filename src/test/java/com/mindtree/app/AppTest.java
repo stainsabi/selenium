@@ -50,19 +50,5 @@ public class AppTest
     	}
     	driver2.quit();
     }
-    @Test
-    public void edge() {
-    	System.setProperty("webdriver.edge.driver", ".//driver//msedgedriver.exe");
-    	WebDriver driver3= new EdgeDriver();
-    	driver3.get("https://www.facebook.com/");
-    	System.out.println(driver3.getTitle());
-    	if("Facebook – log in or sign up".equals(driver3.getTitle())) {
-    		assertTrue(true);
-    	}
-    	else {
-    		assertTrue(false);
-    	}
-    	driver3.quit();
-    	
-    }
+   
 }
